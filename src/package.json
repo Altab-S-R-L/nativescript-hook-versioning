@@ -1,6 +1,6 @@
 {
   "name": "nativescript-hook-versioning",
-  "version": "7.0.1",
+  "version": "7.0.4",
   "description": "Handle your manifest and plist version.",
   "nativescript": {
     "platforms": {

@@ -20,7 +20,7 @@ nativescriptHookVersioning: {
     versionName: true,
     versionCode: {
       enabled: true,
-      content: 'BUNDLE_VERSION_CODE',
+      content: 'BUNDLE_VERSION_CODE', // This can contains '+ANY_NUMBER' if you need to increment your versionCode.
     },
   },
 ```
