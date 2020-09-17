@@ -1,0 +1,67 @@
+{
+  "name": "nativescript-hook-versioning",
+  "version": "7.0.0",
+  "description": "Handle your manifest and plist version.",
+  "nativescript": {
+    "platforms": {
+      "android": "7.0.0",
+      "ios": "7.0.0"
+    },
+    "hooks": [
+      {
+        "type": "after-prepare",
+        "script": "after-prepare.js",
+        "inject": true
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Upd4ting/nativescript-hook-versioning.git"
+  },
+  "scripts": {
+    "tsc": "npm i && tsc",
+    "build": "npm run tsc && npm run build.native",
+    "build.native": "node scripts/build-native.js",
+    "tslint": "cd .. && tslint \"**/*.ts\" --config tslint.json --exclude \"**/node_modules/**\"",
+    "ci.tslint": "npm i && tslint '**/*.ts' --config '../tslint.json' --exclude '**/node_modules/**' --exclude '**/platforms/**'",
+    "prepack": "npm run build.native",
+    "plugin.prepare": "npm run build undefined",
+    "clean": " && npx rimraf -- node_modules package-lock.json && npm i",
+    "postinstall": "node postinstall.js",
+    "preuninstall": "node preuninstall.js"
+  },
+  "keywords": [
+    "NativeScript",
+    "JavaScript",
+    "Android",
+    "iOS",
+    "Versioning",
+    "CICD",
+    "Hook"
+  ],
+  "author": {
+    "name": "Upd4ting",
+    "email": "upd4ting@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/Upd4ting/nativescript-hook-versioning/issues"
+  },
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/Upd4ting/nativescript-hook-versioning",
+  "devDependencies": {
+    "@nativescript/core": "~7.0.0",
+    "@nativescript/types": "~7.0.0",
+    "@nativescript/webpack": "~3.0.0",
+    "androidmanifest": "^2.0.0",
+    "plist": "^3.0.1",
+    "prompt": "^1.0.0",
+    "rimraf": "^2.6.3",
+    "semver": "^5.6.0",
+    "tslint": "^5.12.1",
+    "typescript": "~3.9.0"
+  },
+  "dependencies": {
+    "@nativescript/hook": "^2.0.0"
+  }
+}
