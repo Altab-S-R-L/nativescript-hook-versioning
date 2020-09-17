@@ -1,6 +1,6 @@
 # Nativescript Hook Versioning
 
-[![npm](https://img.shields.io/npm/v/nativescript-hook-versioning)]
+![npm](https://img.shields.io/npm/v/nativescript-hook-versioning)
 
 This plugin add an hook that do the followings things:
 
