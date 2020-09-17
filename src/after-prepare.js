@@ -75,7 +75,7 @@ module.exports = function (
     }
 
     if (versionCodeEnabled) {
-      plist.CFBundleVersion = versionCodeContent;
+      plist.CFBundleVersion = versionCodeContent.toString();
     }
 
     fs.writeFileSync(platformData.configurationFilePath, iOSPList.build(plist));
