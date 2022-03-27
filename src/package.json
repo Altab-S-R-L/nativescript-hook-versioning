@@ -1,5 +1,5 @@
 {
-  "name": "@vulksoft/nativescript-hook-versioning",
+  "name": "@altabsrl/nativescript-hook-versioning",
   "version": "7.0.5",
   "description": "Handle your manifest and plist version.",
   "nativescript": {
@@ -17,15 +17,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Upd4ting/nativescript-hook-versioning.git"
+    "url": "https://github.com/Altab-S-R-L/nativescript-hook-versioning.git"
   },
   "scripts": {
     "tsc": "npm i && tsc",
-    "build": "npm run tsc && npm run build.native",
-    "build.native": "node scripts/build-native.js",
+    "build": "npm run tsc",
     "tslint": "cd .. && tslint \"**/*.ts\" --config tslint.json --exclude \"**/node_modules/**\"",
     "ci.tslint": "npm i && tslint '**/*.ts' --config '../tslint.json' --exclude '**/node_modules/**' --exclude '**/platforms/**'",
-    "prepack": "npm run build.native",
     "plugin.prepare": "npm run build undefined",
     "clean": " && npx rimraf -- node_modules package-lock.json && npm i",
     "postinstall": "node postinstall.js",
@@ -41,21 +39,20 @@
     "Hook"
   ],
   "author": {
-    "name": "Upd4ting",
-    "email": "upd4ting@gmail.com"
+    "name": "Antony Rizzitelli",
+    "email": "antony@altab.be"
   },
   "bugs": {
-    "url": "https://github.com/Upd4ting/nativescript-hook-versioning/issues"
+    "url": "https://github.com/Altab-S-R-L/nativescript-hook-versioning/issues"
   },
   "license": "Apache-2.0",
-  "homepage": "https://github.com/Upd4ting/nativescript-hook-versioning",
+  "homepage": "https://github.com/Altab-S-R-L/nativescript-hook-versioning",
   "devDependencies": {
     "@nativescript/core": "~7.0.0",
     "@nativescript/types": "~7.0.0",
     "@nativescript/webpack": "~3.0.0",
     "prompt": "^1.0.0",
     "rimraf": "^2.6.3",
-    "semver": "^5.6.0",
     "tslint": "^5.12.1",
     "typescript": "~3.9.0"
   },

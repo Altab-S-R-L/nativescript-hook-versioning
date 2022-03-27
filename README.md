@@ -9,7 +9,7 @@ This plugin add an hook that do the followings things:
 
 # Installation
 
-`ns plugin add nativescript-hook-versioning`
+`ns plugin add @altabsrl/nativescript-hook-versioning`
 
 # Usage
 
